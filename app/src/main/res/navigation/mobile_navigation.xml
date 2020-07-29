@@ -48,7 +48,7 @@
     </fragment>
     <fragment
         android:id="@+id/recursosBibliograficosFragment"
-        android:name="com.example.mibibliotecav2.RecursosBibliograficosFragment"
+        android:name="com.example.mibibliotecav2.listslibraries.RecursosBibliograficosFragment"
         android:label="@string/recursos_bibliograficos_fragment_label"
         tools:layout="@layout/fragment_recursos_bibliograficos" />
     <fragment
