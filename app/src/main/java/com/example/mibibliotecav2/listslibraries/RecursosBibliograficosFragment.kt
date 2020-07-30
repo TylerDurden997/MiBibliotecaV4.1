@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mibibliotecav2.R
@@ -16,7 +17,7 @@ import com.google.firebase.database.ValueEventListener
 import kotlinx.android.synthetic.main.fragment_recursos_bibliograficos.*
 
 
-class RecursosBibliograficosFragment : Fragment() {
+class RecursosBibliograficosFragment : Fragment(), BibliotecasRVAdapter.OnItemClickListener {
 
     private val bibliotecasList: MutableList<BibliotecasRemote> = mutableListOf()
     private lateinit var bibliotecasAdapter: BibliotecasRVAdapter
@@ -39,8 +40,10 @@ class RecursosBibliograficosFragment : Fragment() {
             false
         )
         RV_bibliotecas.setHasFixedSize(true)
+        bibliotecasList.clear()
 
-        bibliotecasAdapter = BibliotecasRVAdapter(bibliotecasList as ArrayList<BibliotecasRemote>)
+        bibliotecasAdapter =
+            BibliotecasRVAdapter(bibliotecasList as ArrayList<BibliotecasRemote>, this)
         RV_bibliotecas.adapter = bibliotecasAdapter
     }
 
@@ -63,6 +66,23 @@ class RecursosBibliograficosFragment : Fragment() {
 
         }
         myRef.addValueEventListener(postListener)
+    }
+
+    override fun onItemClickInfo(biblioteca: BibliotecasRemote) {
+        val action =
+            RecursosBibliograficosFragmentDirections.actionRecursosBibliograficosFragmentToInfoBibliotecaFragment(
+                biblioteca
+            )
+        findNavController().navigate(action)
+
+    }
+
+    override fun onItemClickMapa(biblioteca: BibliotecasRemote) {
+        val action =
+            RecursosBibliograficosFragmentDirections.actionRecursosBibliograficosFragmentToUbicacionFragment(
+                biblioteca
+            )
+        findNavController().navigate(action)
     }
 
 }

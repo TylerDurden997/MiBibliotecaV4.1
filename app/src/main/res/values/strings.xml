@@ -70,9 +70,7 @@
 
     <string name="title_activity_bibliotecas">BibliotecasActivity</string>
     <string name="zonadebibliotecas">Zona de Bibliotecas</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="info_bibliotecas">En este sección se indica información relevante de la biblioteca seleccionada</string>
-    <string name="ubicacion_mapa">En esta sección, se carga un mapa con la ubicación de la biblioteca</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="titulo_libro">Título del Libro</string>
@@ -101,4 +99,8 @@
     <!--    paquete de strings generados para el login con google-->
     <string name="facebook_app_id">892286074599719</string>
     <string name="tiutlo_login">Login</string>
+    <string name="titulo_info_biblioteca">Información</string>
+    <string name="titulo_ubicacion">Mapa</string>
+    <string name="horario_biblioteca">Horario:</string>
+    <string name="pagina_biblioteca">Página Web de Recursos:</string>
 </resources>

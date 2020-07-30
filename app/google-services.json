@@ -15,6 +15,22 @@
       },
       "oauth_client": [
         {
+          "client_id": "677388360721-gtlelj4mblrgaiuv5ckt6rf437jo494d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mibibliotecav2",
+            "certificate_hash": "9dc6bf2007735294f25ea8a99689ec2b2e8314ba"
+          }
+        },
+        {
+          "client_id": "677388360721-2np2qj6cb8lp18beor95in79fuj0mvhn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mibibliotecav2",
+            "certificate_hash": "7d70b4a5c08e91ab3cda7515aade19c4ee2939ad"
+          }
+        },
+        {
           "client_id": "677388360721-kpirn8c27tipf4pfih3hlqu6g09b4aug.apps.googleusercontent.com",
           "client_type": 3
         }
